@@ -1,9 +1,13 @@
+const bcrypt = require("bcrypt");
+
 function validateResponse(receivedData) {
-    if (!receivedData.username || !receivedData.password) {
-      return false;
-    }
-    return true;
+  if (!receivedData.username || !receivedData.password) {
+    return false;
   }
-  module.exports = {
-    validateResponse
-  }
+  return true;
+}
+
+
+module.exports = {
+  validateResponse,
+};
