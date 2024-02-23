@@ -1,30 +1,29 @@
 const userDao = require("../repository/userDAO.js");
 const uuid = require("uuid");
-const { validateResponse } = require("../util/middleware");
+const { validateResponseCredentials } = require("../util/middleware");
 
-async function postUser(receivedData) {
-  if (validateResponse(receivedData)) {
-    if (!receivedData.role) {
-      receivedData.role = "employee";
+async function postUser(requestData) {
+  if (validateResponseCredentials(requestData)) {
+    if (!requestData.role) {
+      requestData.role = "employee";
     }
 
     let data = await userDao.createUser({
-      username: receivedData.username,
-      password: receivedData.password,
+      username: requestData.username,
+      password: requestData.password,
       id: uuid.v4(),
-      role: receivedData.role,
+      role: requestData.role,
     });
     return data;
   }
-
   return null;
 }
 
-async function loginUser(receivedData) {
-  if (validateResponse(receivedData)) {
+async function loginUser(requestData) {
+  if (validateResponseCredentials(requestData)) {
     let data = await userDao.getUserByUsername({
-      username: receivedData.username,
-      password: receivedData.password,
+      username: requestData.username,
+      password: requestData.password,
     });
     return data;
   }

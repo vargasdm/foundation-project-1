@@ -18,7 +18,7 @@ const client = new DynamoDBClient({
 // getting document client
 const documentClient = DynamoDBDocumentClient.from(client);
 
-const TableName = "reimbursment_user_table";
+const TableName = "reimbursement_user_table";
 
 async function createUser(user) {
   // spice added to hashed password

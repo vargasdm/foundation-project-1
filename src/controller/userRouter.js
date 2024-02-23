@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const userService = require("../service/userService");
 require('dotenv').config()
 const secretKey = process.env.SECRET_KEY;
-// console.log(secretKey);
+
 
 router.post("/register", async (req, res) => {
   let data = await userService.postUser(req.body);

@@ -81,3 +81,28 @@
 2024-02-23T19:05:39.995Z [info]: Incoming POST : /users/register
 2024-02-23T19:06:12.613Z [info]: Incoming POST : /users/login
 2024-02-23T19:06:20.138Z [info]: Incoming POST : /users/login
+2024-02-23T20:39:10.352Z [info]: Incoming POST : /users/login
+2024-02-23T20:49:36.025Z [info]: Incoming POST : /users/login
+2024-02-23T20:49:36.202Z [error]: (...args) => defaultLogger[method](...args)
+2024-02-23T21:09:22.713Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:14:13.558Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:15:44.416Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:16:03.901Z [info]: Incoming POST : /users/login
+2024-02-23T21:16:37.257Z [info]: Incoming POST : /users/login
+2024-02-23T21:16:37.406Z [error]: Cannot read properties of undefined (reading 'password')
+2024-02-23T21:16:52.688Z [info]: Incoming POST : /users/register
+2024-02-23T21:16:58.031Z [info]: Incoming POST : /users/login
+2024-02-23T21:17:15.455Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:18:27.052Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:18:44.767Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:23:44.725Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:25:56.124Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:27:55.807Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:31:26.663Z [info]: Incoming POST : /users/login
+2024-02-23T21:31:54.558Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:36:26.577Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:36:56.983Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:38:08.633Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:38:46.601Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:38:58.638Z [info]: Incoming POST : /tickets/create
+2024-02-23T21:39:08.286Z [info]: Incoming POST : /tickets/create
