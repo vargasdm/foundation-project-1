@@ -1,6 +1,7 @@
-require('dotenv').config()
+require("dotenv").config();
 const secretKey = process.env.SECRET_KEY;
 const jwt = require("jsonwebtoken");
+let ticketQueue = require("../service/ticketService");
 
 function validateResponseCredentials(receivedData) {
   if (!receivedData.username || !receivedData.password) {
@@ -9,17 +10,31 @@ function validateResponseCredentials(receivedData) {
   return true;
 }
 
-function validateTicketCredentials(receivedData) {
+function validateTicketData(receivedData) {
   if (!receivedData.user || !receivedData.description || !receivedData.amount) {
     return false;
   }
   return true;
 }
 
+function validateProcessData(receivedData) {
+  if (!receivedData.ticket_id || !receivedData.role || !receivedData.status) {
+    return false;
+  }
+  return true;
+}
+
+function validateTicketQueue(receivedData, ticketQueueArr) {
+  if (receivedData.ticket_id == ticketQueueArr[0]) {
+    return true;
+  }
+  return false;
+}
+
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"];
   console.log(authHeader);
-  
+
   const token = authHeader && authHeader.split(" ")[1];
   console.log(token);
 
@@ -40,9 +55,11 @@ function authenticateToken(req, res, next) {
   });
 }
 
-function authenticateAdminToken(req, res, next) {
+function authenticateManagerToken(req, res, next) {
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
+
+  // console.log(req.query.role);
 
   if (!token) {
     res.status(401).json({ message: "Unauthorized Access" });
@@ -50,19 +67,19 @@ function authenticateAdminToken(req, res, next) {
   }
 
   jwt.verify(token, secretKey, (err, user) => {
-    console.log(user.role);
-    if (err || user.role !== "admin") {
+    if (err || req.query.role !== "manager") {
       res.status(403).json({ message: "Forbidden Access" });
       return;
     }
-    req.user = user;
     next();
   });
 }
 
 module.exports = {
   validateResponseCredentials,
-  validateTicketCredentials,
+  validateTicketData,
+  validateProcessData,
+  validateTicketQueue,
   authenticateToken,
-  authenticateAdminToken,
+  authenticateManagerToken,
 };

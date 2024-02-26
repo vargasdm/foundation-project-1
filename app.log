@@ -106,3 +106,103 @@
 2024-02-23T21:38:46.601Z [info]: Incoming POST : /tickets/create
 2024-02-23T21:38:58.638Z [info]: Incoming POST : /tickets/create
 2024-02-23T21:39:08.286Z [info]: Incoming POST : /tickets/create
+2024-02-26T16:22:09.998Z [info]: Incoming POST : /users/login
+2024-02-26T16:24:11.506Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:25:18.398Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:27:14.575Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:28:05.655Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:28:19.363Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:30:29.288Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:31:30.765Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:33:19.353Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:35:58.793Z [info]: Incoming POST : /tickets/create
+2024-02-26T16:36:08.701Z [info]: Incoming POST : /tickets/create
+2024-02-26T16:36:41.005Z [info]: Incoming POST : /tickets/create
+2024-02-26T16:38:04.931Z [info]: Incoming POST : /tickets/create
+2024-02-26T16:42:33.693Z [info]: Incoming POST : /tickets/create
+2024-02-26T16:43:15.820Z [info]: Incoming POST : /tickets/create
+2024-02-26T16:44:52.573Z [info]: Incoming POST : /tickets/create
+2024-02-26T16:45:37.571Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:47:23.807Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:50:07.239Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:52:36.547Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:53:29.975Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:54:05.658Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:55:17.345Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:56:10.107Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:56:50.594Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:57:12.936Z [info]: Incoming PUT : /tickets/process
+2024-02-26T16:59:57.485Z [info]: Incoming PUT : /tickets/process
+2024-02-26T17:00:08.398Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:01:23.744Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:03:34.226Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:06:29.655Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:07:40.573Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:08:08.726Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:08:12.396Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:08:55.180Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:10:36.902Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:10:44.271Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:10:49.668Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:11:16.278Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:12:57.074Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:13:01.967Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:13:14.113Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:13:14.148Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T17:13:51.608Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:14:06.723Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:14:06.756Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T17:16:40.643Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:16:52.715Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:16:52.747Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T17:20:43.594Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:21:03.581Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:21:03.613Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T17:32:06.139Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:32:18.694Z [info]: Incoming PATCH : /tickets/process
+2024-02-26T17:32:18.730Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T17:47:16.709Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:47:33.218Z [info]: Incoming PATCH : /tickets/approve?ticket_id=10bb7bc1-d581-432b-943a-f68d1da5c2b5
+2024-02-26T17:48:11.284Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:48:27.216Z [info]: Incoming PATCH : /tickets/approve?ticket_id=533806df-f1ae-4f6e-b217-e2bd7b34cfd6
+2024-02-26T17:48:51.909Z [info]: Incoming PUT : /tickets/approve?ticket_id=533806df-f1ae-4f6e-b217-e2bd7b34cfd6
+2024-02-26T17:50:13.045Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:50:29.955Z [info]: Incoming PUT : /tickets/approve?ticket_id=6f5cb7f9-8e2c-4101-90e8-ff07d23a435a
+2024-02-26T17:51:38.672Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:51:50.914Z [info]: Incoming PUT : /tickets/approve?ticket_id=26d222eb-ba5b-4c3d-89ef-035c2b400532
+2024-02-26T17:52:26.611Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:52:38.389Z [info]: Incoming PUT : /tickets/approve?ticket_id=4cc4f20e-684f-43cd-b9c5-d9c662fd2b98
+2024-02-26T17:56:41.592Z [info]: Incoming POST : /tickets/create
+2024-02-26T17:56:58.460Z [info]: Incoming PUT : /tickets/approve?ticket_id=15c9ea37-3334-4a8d-8329-528ba1cceebf
+2024-02-26T17:56:58.491Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T17:57:28.708Z [info]: Incoming PUT : /tickets/approve?ticket_id=15c9ea37-3334-4a8d-8329-528ba1cceebf
+2024-02-26T17:57:59.382Z [info]: Incoming PUT : /tickets/approve?ticket_id=15c9ea37-3334-4a8d-8329-528ba1cceebf
+2024-02-26T17:57:59.410Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T17:58:18.564Z [info]: Incoming PUT : /tickets/approve?ticket_id=15c9ea37-3334-4a8d-8329-528ba1cceebf
+2024-02-26T17:58:18.592Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T18:01:03.401Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:01:24.966Z [info]: Incoming PUT : /tickets/approve?ticket_id=6b2f80e5-5096-42ec-acc7-501fe6fa69e6
+2024-02-26T18:01:25.006Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T18:06:50.457Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:07:05.429Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:07:17.811Z [info]: Incoming PUT : /tickets/approve?ticket_id=68ee5642-3106-49da-8b5c-ceaa15c18167
+2024-02-26T18:07:17.848Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T18:08:53.024Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:09:03.964Z [info]: Incoming PUT : /tickets/approve?ticket_id=150cf5f3-917c-4feb-b897-9bac831f93a6
+2024-02-26T18:09:04.045Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T18:12:12.416Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:12:22.390Z [info]: Incoming PUT : /tickets/approve?ticket_id=24566734-7421-4b4c-b590-71c368b959c3
+2024-02-26T18:12:22.424Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-26T18:13:16.822Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:13:25.845Z [info]: Incoming PUT : /tickets/approve?ticket_id=8d8f6e10-6ac8-496d-9297-96c9a1d5b056
+2024-02-26T18:14:49.283Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:15:12.150Z [info]: Incoming PUT : /tickets/approve?ticket_id=cadc1b1a-bf6d-47e1-87c6-45bccf2f6ab8
+2024-02-26T18:19:40.536Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:20:04.508Z [info]: Incoming PUT : /tickets/approve?ticket_id=d73ec344-da05-441b-89c7-2bc45119b888&role=manager
+2024-02-26T18:32:11.649Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:32:30.090Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:32:37.270Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:32:47.594Z [info]: Incoming PUT : /tickets/approve?ticket_id=c829d802-78d1-4d7e-8fe2-d429861f0296&role=manager
+2024-02-26T18:33:34.376Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:33:41.117Z [info]: Incoming POST : /tickets/create
+2024-02-26T18:33:47.772Z [info]: Incoming PUT : /tickets/approve?ticket_id=5991af07-fe24-44b8-8b91-16758e5998da&role=manager
