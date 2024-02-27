@@ -5,6 +5,7 @@ const {
   GetCommand,
   ScanCommand,
   UpdateCommand,
+  QueryCommand,
 } = require("@aws-sdk/lib-dynamodb");
 const { fromIni } = require("@aws-sdk/credential-provider-ini");
 const logger = require("../util/logger");
@@ -20,6 +21,30 @@ const client = new DynamoDBClient({
 const documentClient = DynamoDBDocumentClient.from(client);
 
 const TableName = "reimbursement_ticket_table";
+
+const userIndex = "user-index";
+
+async function getTicketsByUser(paramUser) {
+  const command = new QueryCommand({
+    TableName,
+    IndexName: userIndex,
+    KeyConditionExpression: "#user = :user",
+    ExpressionAttributeNames: {
+      "#user": "user",
+    },
+    ExpressionAttributeValues: {
+      ":user": paramUser,
+    },
+  });
+  try {
+    const data = await documentClient.send(command);
+    console.log(data);
+    return data;
+  } catch (error) {
+    logger.error(error);
+  }
+   
+}
 
 async function createTicket(ticket) {
   const command = new PutCommand({
@@ -75,4 +100,5 @@ async function updateTicket(status, queryId) {
 module.exports = {
   createTicket,
   updateTicket,
+  getTicketsByUser,
 };

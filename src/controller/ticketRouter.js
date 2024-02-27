@@ -8,6 +8,12 @@ const {
   authenticateManagerToken,
 } = require("../util/middleware");
 
+router.get("/:user", authenticateToken, async (req, res) => {
+  let paramUser = req.params.user;
+  let data = await ticketService.getTickets(paramUser);
+  res.status(200).json({ message: "Tickets retrieved successfully", data });
+});
+
 router.post("/create", authenticateToken, async (req, res) => {
   let data = await ticketService.postTicket(req.body);
 
@@ -17,7 +23,7 @@ router.post("/create", authenticateToken, async (req, res) => {
     res.status(400).json({
       message:
         "A ticket could not be created, make sure all fields are filled and try again",
-      receivedData: data,
+      receivedData: data.Items,
     });
   }
 });
@@ -44,9 +50,7 @@ router.put("/deny", authenticateManagerToken, async (req, res) => {
   let data = await ticketService.processTicket("Approve", queryId);
 
   if (data) {
-    res
-      .status(201)
-      .json({ message: "A ticket was sucessfully denied", data });
+    res.status(201).json({ message: "A ticket was sucessfully denied", data });
   } else {
     res.status(400).json({
       message:

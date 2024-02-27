@@ -17,19 +17,19 @@ function validateTicketData(receivedData) {
   return true;
 }
 
-function validateProcessData(receivedData) {
-  if (!receivedData.ticket_id || !receivedData.role || !receivedData.status) {
-    return false;
-  }
-  return true;
-}
+// function validateProcessData(receivedData) {
+//   if (!receivedData.ticket_id || !receivedData.role || !receivedData.status) {
+//     return false;
+//   }
+//   return true;
+// }
 
-function validateTicketQueue(receivedData, ticketQueueArr) {
-  if (receivedData.ticket_id == ticketQueueArr[0]) {
-    return true;
-  }
-  return false;
-}
+// function validateTicketQueue(receivedData, ticketQueueArr) {
+//   if (receivedData.ticket_id == ticketQueueArr[0]) {
+//     return true;
+//   }
+//   return false;
+// }
 
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"];
@@ -78,8 +78,8 @@ function authenticateManagerToken(req, res, next) {
 module.exports = {
   validateResponseCredentials,
   validateTicketData,
-  validateProcessData,
-  validateTicketQueue,
+  // validateProcessData,
+  // validateTicketQueue,
   authenticateToken,
   authenticateManagerToken,
 };

@@ -7,6 +7,11 @@ const {
 } = require("../util/middleware");
 let ticketQueue = [];
 
+async function getTickets(paramUser) {
+  let data = await ticketDAO.getTicketsByUser(paramUser);
+  return data;
+}
+
 async function postTicket(requestData) {
   if (validateTicketData(requestData)) {
     let newTicketId = uuid.v4();
@@ -27,7 +32,6 @@ async function postTicket(requestData) {
 }
 
 async function processTicket(status, queryId) {
-
   // console.log(status, queryId);
 
   let data = await ticketDAO.updateTicket(status, queryId);
@@ -40,4 +44,5 @@ module.exports = {
   postTicket,
   processTicket,
   ticketQueue,
+  getTickets,
 };

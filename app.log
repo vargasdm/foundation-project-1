@@ -206,3 +206,14 @@
 2024-02-26T18:33:34.376Z [info]: Incoming POST : /tickets/create
 2024-02-26T18:33:41.117Z [info]: Incoming POST : /tickets/create
 2024-02-26T18:33:47.772Z [info]: Incoming PUT : /tickets/approve?ticket_id=5991af07-fe24-44b8-8b91-16758e5998da&role=manager
+2024-02-27T18:15:11.356Z [info]: Incoming POST : /users/login
+2024-02-27T18:15:11.500Z [error]: Cannot read properties of undefined (reading 'password')
+2024-02-27T18:15:33.524Z [info]: Incoming POST : /users/register
+2024-02-27T18:15:39.683Z [info]: Incoming POST : /users/login
+2024-02-27T18:16:10.121Z [info]: Incoming POST : /tickets/create
+2024-02-27T18:16:34.120Z [info]: Incoming POST : /tickets/create
+2024-02-27T18:16:48.437Z [info]: Incoming POST : /tickets/create
+2024-02-27T18:19:35.331Z [info]: Incoming GET : /tickets/?user=vargas
+2024-02-27T18:20:18.099Z [info]: Incoming GET : /tickets/?user=vargas
+2024-02-27T18:22:35.105Z [info]: Incoming GET : /tickets/:vargas
+2024-02-27T18:27:18.803Z [info]: Incoming GET : /tickets/vargas
