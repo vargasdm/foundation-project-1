@@ -24,6 +24,8 @@ const TableName = "reimbursement_ticket_table";
 
 const userIndex = "user-index";
 
+const pendingIndex = "status-index";
+
 async function getTicketsByUser(paramUser) {
   const command = new QueryCommand({
     TableName,
@@ -43,7 +45,27 @@ async function getTicketsByUser(paramUser) {
   } catch (error) {
     logger.error(error);
   }
-   
+}
+
+async function getTicketsByPending(status) {
+  const command = new QueryCommand({
+    TableName,
+    IndexName: pendingIndex,
+    KeyConditionExpression: "#status = :status",
+    ExpressionAttributeNames: {
+      "#status": "status",
+    },
+    ExpressionAttributeValues: {
+      ":status": status,
+    },
+  });
+  try {
+    const data = await documentClient.send(command);
+    console.log(data);
+    return data;
+  } catch (error) {
+    logger.error(error);
+  }
 }
 
 async function createTicket(ticket) {
@@ -78,7 +100,7 @@ async function updateTicket(status, queryId) {
     } catch (error) {
       logger.error(error);
     }
-  } else if (status === "deny") {
+  } else if (status === "Denied") {
     const command = new UpdateCommand({
       TableName,
       Key: { ticket_id: queryId },
@@ -101,4 +123,5 @@ module.exports = {
   createTicket,
   updateTicket,
   getTicketsByUser,
+  getTicketsByPending,
 };

@@ -217,3 +217,26 @@
 2024-02-27T18:20:18.099Z [info]: Incoming GET : /tickets/?user=vargas
 2024-02-27T18:22:35.105Z [info]: Incoming GET : /tickets/:vargas
 2024-02-27T18:27:18.803Z [info]: Incoming GET : /tickets/vargas
+2024-02-27T18:48:24.635Z [info]: Incoming GET : /tickets/vargas
+2024-02-27T18:49:13.295Z [info]: Incoming PUT : /tickets/approve?ticket_id=eec1467a-468b-49b4-84ff-6eef51f9d898&role=manager
+2024-02-27T18:49:39.745Z [info]: Incoming PUT : /tickets/approve?ticket_id=eec1467a-468b-49b4-84ff-6eef51f9d898&role=manager
+2024-02-27T18:50:06.307Z [info]: Incoming POST : /tickets/create
+2024-02-27T18:50:26.865Z [info]: Incoming PUT : /tickets/approve?ticket_id=b398c172-ca98-4820-881e-3a8475c5d1c9&role=manager
+2024-02-27T18:50:50.964Z [info]: Incoming PUT : /tickets/approve?ticket_id=b398c172-ca98-4820-881e-3a8475c5d1c9&role=manager
+2024-02-27T18:51:14.773Z [info]: Incoming GET : /tickets/vargas
+2024-02-27T18:51:30.307Z [info]: Incoming POST : /tickets/create
+2024-02-27T18:51:52.872Z [info]: Incoming PUT : /tickets/deny?ticket_id=3073cca8-6e98-4cca-95ce-2d9f77f28585&role=manager
+2024-02-27T18:52:08.076Z [info]: Incoming PUT : /tickets/deny?ticket_id=3073cca8-6e98-4cca-95ce-2d9f77f28585&role=manager
+2024-02-27T18:52:46.548Z [info]: Incoming POST : /tickets/create
+2024-02-27T18:52:58.516Z [info]: Incoming PUT : /tickets/deny?ticket_id=e78ebe3a-924c-4a6f-bb9f-e4ea301fe7e0&role=manager
+2024-02-27T18:55:01.153Z [info]: Incoming POST : /tickets/create
+2024-02-27T18:55:23.292Z [info]: Incoming PUT : /tickets/deny?ticket_id=5e9ebf0e-83d1-4068-908c-6e70f2a1a4d8&role=manager
+2024-02-27T18:57:33.724Z [info]: Incoming GET : /tickets?role=manager
+2024-02-27T18:57:49.752Z [info]: Incoming GET : /tickets/?role=manager
+2024-02-27T18:59:15.349Z [info]: Incoming GET : /tickets?role=manager
+2024-02-27T18:59:15.511Z [error]: The table does not have the specified index: pending-index
+2024-02-27T18:59:36.677Z [info]: Incoming GET : /tickets?role=manager
+2024-02-27T18:59:36.827Z [error]: The table does not have the specified index: pending-index
+2024-02-27T19:00:45.456Z [info]: Incoming GET : /tickets?role=manager
+2024-02-27T19:01:05.617Z [info]: Incoming GET : /tickets?role=manager
+2024-02-27T19:01:55.256Z [info]: Incoming GET : /tickets?role=manager
