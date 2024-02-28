@@ -1,10 +1,6 @@
 const ticketDAO = require("../repository/ticketDAO.js");
 const uuid = require("uuid");
-const {
-  validateTicketData,
-  validateTicketQueue,
-  validateProcessData,
-} = require("../util/middleware");
+
 let ticketQueue = [];
 
 async function getTickets(paramUser) {
@@ -37,18 +33,22 @@ async function postTicket(requestData) {
 }
 
 async function processTicket(status, queryId) {
-  // console.log(status, queryId);
-
   let data = await ticketDAO.updateTicket(status, queryId);
   ticketQueue.shift();
   console.log(ticketQueue);
   return data;
 }
 
+function validateTicketData(receivedData) {
+  if (!receivedData.user || !receivedData.description || !receivedData.amount) {
+    return false;
+  }
+  return true;
+}
+
 module.exports = {
   postTicket,
   processTicket,
-  ticketQueue,
   getTickets,
-  getPendingTickets
+  getPendingTickets,
 };

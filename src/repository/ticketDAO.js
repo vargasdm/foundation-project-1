@@ -2,15 +2,11 @@ const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
 const {
   DynamoDBDocumentClient,
   PutCommand,
-  GetCommand,
-  ScanCommand,
   UpdateCommand,
   QueryCommand,
 } = require("@aws-sdk/lib-dynamodb");
 const { fromIni } = require("@aws-sdk/credential-provider-ini");
 const logger = require("../util/logger");
-const { error } = require("winston");
-const { query } = require("express");
 
 const client = new DynamoDBClient({
   region: "us-east-1",

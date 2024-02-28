@@ -1,6 +1,5 @@
 const userDao = require("../repository/userDAO.js");
 const uuid = require("uuid");
-const { validateResponseCredentials } = require("../util/middleware");
 
 async function postUser(requestData) {
   if (validateResponseCredentials(requestData)) {
@@ -29,6 +28,13 @@ async function loginUser(requestData) {
   }
 
   return null;
+}
+
+function validateResponseCredentials(receivedData) {
+  if (!receivedData.username || !receivedData.password) {
+    return false;
+  }
+  return true;
 }
 
 module.exports = {

@@ -3,7 +3,6 @@ const {
   DynamoDBDocumentClient,
   PutCommand,
   GetCommand,
-  ScanCommand,
 } = require("@aws-sdk/lib-dynamodb");
 const { fromIni } = require("@aws-sdk/credential-provider-ini");
 const bcrypt = require("bcrypt");
