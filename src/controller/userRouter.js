@@ -5,9 +5,9 @@ const userService = require("../service/userService");
 require("dotenv").config();
 const secretKey = process.env.SECRET_KEY;
 
+// register user endpoint
 router.post("/register", async (req, res) => {
   let data = await userService.postUser(req.body);
-
   if (data) {
     res.status(201).json({ message: "User registered successfully" });
   } else {
@@ -18,23 +18,22 @@ router.post("/register", async (req, res) => {
   }
 });
 
+// login user endpoint
 router.post("/login", async (req, res) => {
   let data = await userService.loginUser(req.body);
 
   if (data) {
     const token = jwt.sign(
       {
-        username: data.Item.username,
-        role: data.Item.role,
+        // token payload
+        username: data.Items[0].username,
+        role: data.Items[0].role,
       },
       secretKey,
       {
         expiresIn: "5h",
       }
     );
-
-    let decoded = jwt.decode(token);
-    console.log(decoded);
 
     res.status(200).json({ message: "User logged in successfully", token });
   } else {

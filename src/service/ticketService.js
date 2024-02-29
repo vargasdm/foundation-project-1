@@ -16,9 +16,9 @@ async function getPendingTickets(status) {
 async function postTicket(requestData) {
   if (validateTicketData(requestData)) {
     let newTicketId = uuid.v4();
-    console.log(ticketQueue);
+
     ticketQueue.push(newTicketId);
-    console.log(ticketQueue);
+
     let data = await ticketDAO.createTicket({
       ticket_id: newTicketId,
       user: requestData.user,
@@ -51,4 +51,5 @@ module.exports = {
   processTicket,
   getTickets,
   getPendingTickets,
+  validateTicketData,
 };

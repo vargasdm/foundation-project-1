@@ -279,3 +279,91 @@
 2024-02-28T20:13:24.049Z [info]: Incoming GET : /tickets
 2024-02-28T20:14:18.283Z [info]: Incoming PUT : /tickets/approve?ticket_id=5b6f70c0-107a-411f-82d3-7ed4f0b143df
 2024-02-28T20:15:32.883Z [info]: Incoming PUT : /tickets/deny?ticket_id=c50e18d8-ed6c-44af-b7df-a534e967b783
+2024-02-28T21:30:24.390Z [info]: Incoming POST : /users/login
+2024-02-28T21:59:03.012Z [info]: Incoming POST : /users/login
+2024-02-28T21:59:03.166Z [error]: validatePasswrord is not defined
+2024-02-28T22:00:45.033Z [info]: Incoming POST : /users/login
+2024-02-28T22:00:45.184Z [error]: validatePasswrord is not a function
+2024-02-28T22:03:50.984Z [info]: Incoming POST : /users/login
+2024-02-28T22:03:51.149Z [error]: userService.validatePassword is not a function
+2024-02-28T22:07:03.895Z [info]: Incoming POST : /users/login
+2024-02-28T22:07:04.044Z [error]: userService is not defined
+2024-02-28T22:07:21.859Z [info]: Incoming POST : /users/login
+2024-02-28T22:07:22.029Z [error]: bcrypt is not defined
+2024-02-28T22:07:43.740Z [info]: Incoming POST : /users/login
+2024-02-28T22:24:36.906Z [info]: Incoming POST : /users/login
+2024-02-28T22:24:37.123Z [error]: (...args) => defaultLogger[method](...args)
+2024-02-28T22:25:33.219Z [info]: Incoming POST : /users/login
+2024-02-28T22:25:33.419Z [error]: (...args) => defaultLogger[method](...args)
+2024-02-28T22:36:18.356Z [info]: Incoming POST : /users/login
+2024-02-28T22:36:34.070Z [info]: Incoming POST : /users/login
+2024-02-28T22:37:16.521Z [info]: Incoming POST : /users/login
+2024-02-28T22:38:19.041Z [info]: Incoming POST : /users/login
+2024-02-28T22:38:37.616Z [info]: Incoming POST : /users/login
+2024-02-28T22:39:01.690Z [info]: Incoming POST : /users/login
+2024-02-28T22:39:46.318Z [info]: Incoming POST : /users/login
+2024-02-28T22:42:14.072Z [info]: Incoming POST : /users/login
+2024-02-28T22:43:30.880Z [info]: Incoming POST : /users/login
+2024-02-28T22:43:31.105Z [error]: (...args) => defaultLogger[method](...args)
+2024-02-28T22:43:38.186Z [info]: Incoming POST : /users/login
+2024-02-28T22:43:38.257Z [error]: (...args) => defaultLogger[method](...args)
+2024-02-28T22:44:20.213Z [info]: Incoming POST : /users/login
+2024-02-28T22:54:47.624Z [info]: Incoming POST : /users/login
+2024-02-29T20:05:47.759Z [info]: Incoming POST : /users/login
+2024-02-29T20:06:09.386Z [info]: Incoming POST : /users/login
+2024-02-29T20:06:09.545Z [error]: Cannot read properties of undefined (reading 'password')
+2024-02-29T20:07:42.941Z [info]: Incoming POST : /users/login
+2024-02-29T20:07:43.099Z [error]: Value provided in ExpressionAttributeNames unused in expressions: keys: {#password}
+2024-02-29T20:09:55.258Z [info]: Incoming POST : /users/login
+2024-02-29T20:09:55.418Z [error]: data and hash arguments required
+2024-02-29T20:10:44.736Z [info]: Incoming POST : /users/login
+2024-02-29T20:13:30.802Z [info]: Incoming POST : /users/login
+2024-02-29T20:15:02.192Z [info]: Incoming POST : /users/login
+2024-02-29T20:15:41.434Z [info]: Incoming POST : /users/login
+2024-02-29T20:16:45.295Z [info]: Incoming POST : /users/login
+2024-02-29T20:17:06.155Z [info]: Incoming POST : /users/login
+2024-02-29T20:47:50.353Z [info]: Incoming POST : /users/login
+2024-02-29T20:48:23.870Z [info]: Incoming POST : /users/login
+2024-02-29T20:48:38.514Z [info]: Incoming POST : /users/login
+2024-02-29T20:49:40.635Z [info]: Incoming POST : /users/login
+2024-02-29T20:49:50.879Z [info]: Incoming POST : /users/login
+2024-02-29T20:51:18.516Z [info]: Incoming POST : /users/login
+2024-02-29T20:51:53.076Z [info]: Incoming POST : /users/login
+2024-02-29T20:59:37.947Z [info]: Incoming POST : /users/login
+2024-02-29T20:59:58.624Z [info]: Incoming POST : /users/login
+2024-02-29T21:01:10.340Z [info]: Incoming POST : /users/login
+2024-02-29T21:02:45.547Z [info]: Incoming POST : /users/login
+2024-02-29T21:03:37.570Z [info]: Incoming POST : /users/login
+2024-02-29T21:17:48.441Z [info]: Incoming POST : /users/login
+2024-02-29T21:18:12.579Z [info]: Incoming POST : /users/login
+2024-02-29T21:46:04.763Z [info]: Incoming POST : /users/register
+2024-02-29T21:47:23.885Z [info]: Incoming POST : /users/register
+2024-02-29T21:47:57.471Z [info]: Incoming POST : /users/register
+2024-02-29T21:47:57.665Z [error]: The conditional request failed
+2024-02-29T21:48:13.319Z [info]: Incoming POST : /users/register
+2024-02-29T21:48:13.529Z [error]: The conditional request failed
+2024-02-29T21:48:36.288Z [info]: Incoming POST : /users/register
+2024-02-29T21:48:36.484Z [error]: The conditional request failed
+2024-02-29T21:48:59.945Z [info]: Incoming POST : /users/register
+2024-02-29T21:49:00.182Z [error]: The conditional request failed
+2024-02-29T21:51:22.474Z [info]: Incoming POST : /users/register
+2024-02-29T21:52:05.692Z [info]: Incoming POST : /users/register
+2024-02-29T21:55:55.506Z [info]: Incoming POST : /users/register
+2024-02-29T21:55:55.646Z [error]: The conditional request failed
+2024-02-29T21:56:25.764Z [info]: Incoming POST : /users/login
+2024-02-29T21:57:57.616Z [info]: Incoming POST : /users/login
+2024-02-29T22:00:23.450Z [info]: Incoming POST : /users/login
+2024-02-29T22:00:50.733Z [info]: Incoming POST : /tickets/create
+2024-02-29T22:01:36.123Z [info]: Incoming POST : /tickets/create
+2024-02-29T22:02:04.213Z [info]: Incoming POST : /tickets/create
+2024-02-29T22:02:24.199Z [info]: Incoming POST : /tickets/create
+2024-02-29T22:03:21.162Z [info]: Incoming GET : /tickets/vargas
+2024-02-29T22:05:17.412Z [info]: Incoming GET : /tickets
+2024-02-29T22:05:26.453Z [info]: Incoming GET : /tickets
+2024-02-29T22:08:06.924Z [info]: Incoming PUT : /tickets/approve?ticket_id=8924e69a-88dd-4d6f-9d78-57654a8c6588
+2024-02-29T22:09:05.166Z [info]: Incoming PUT : /tickets/approve?ticket_id=442d8552-a3be-4aad-8277-2c61b20cace5
+2024-02-29T22:09:08.547Z [info]: Incoming PUT : /tickets/approve?ticket_id=442d8552-a3be-4aad-8277-2c61b20cace5
+2024-02-29T22:09:16.564Z [info]: Incoming PUT : /tickets/deny?ticket_id=98f5d283-bc24-47b6-b6d3-53c84d6e2eae
+2024-02-29T22:09:19.453Z [info]: Incoming PUT : /tickets/deny?ticket_id=98f5d283-bc24-47b6-b6d3-53c84d6e2eae
+2024-02-29T22:09:25.121Z [info]: Incoming GET : /tickets/vargas
+2024-02-29T22:09:32.758Z [info]: Incoming GET : /tickets

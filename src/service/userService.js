@@ -24,6 +24,7 @@ async function loginUser(requestData) {
       username: requestData.username,
       password: requestData.password,
     });
+
     return data;
   }
 
@@ -40,4 +41,5 @@ function validateResponseCredentials(receivedData) {
 module.exports = {
   postUser,
   loginUser,
+  validateResponseCredentials,
 };

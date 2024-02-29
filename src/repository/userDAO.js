@@ -2,13 +2,12 @@ const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
 const {
   DynamoDBDocumentClient,
   PutCommand,
-  GetCommand,
+  QueryCommand,
 } = require("@aws-sdk/lib-dynamodb");
+const { validatePassword } = require("../util/encrypt");
 const { fromIni } = require("@aws-sdk/credential-provider-ini");
-const bcrypt = require("bcrypt");
 const logger = require("../util/logger");
-const { error } = require("winston");
-
+const bcrypt = require("bcrypt");
 const client = new DynamoDBClient({
   region: "us-east-1",
   credentials: fromIni({ profile: "default" }),
@@ -17,55 +16,55 @@ const client = new DynamoDBClient({
 // getting document client
 const documentClient = DynamoDBDocumentClient.from(client);
 
+// db table name variable
 const TableName = "reimbursement_user_table";
 
+// creating user item
 async function createUser(user) {
   // spice added to hashed password
   const saltRounds = 10;
 
   // hashing password
   user.password = await bcrypt.hash(user.password, saltRounds);
-  console.log(user.password);
 
   const command = new PutCommand({
     TableName,
     Item: user,
+    // checks to see if username already exists
     ConditionExpression: "attribute_not_exists(username)",
   });
   try {
     const data = await documentClient.send(command);
-    console.log(data);
     return data;
   } catch (error) {
     logger.error(error);
   }
 }
 
+// get user item by username partition key
 async function getUserByUsername(user) {
-  const getCommand = new GetCommand({
+  const command = new QueryCommand({
     TableName,
-    Key: {
-      username: user.username,
+    KeyConditionExpression: "#username = :username",
+    ExpressionAttributeNames: {
+      "#username": "username",
+    },
+    ExpressionAttributeValues: {
+      ":username": user.username,
     },
   });
   try {
-    const data = await documentClient.send(getCommand);
-
-    console.log(data.Item.password);
-    let dbPass = data.Item.password;
-
-    console.log(user.password);
+    const data = await documentClient.send(command);
+    console.log(data);
+    let dbPass = data.Items[0].password;
     let requestPass = user.password;
 
-    if (await bcrypt.compare(requestPass, dbPass)) {
-      console.log(data);
+    if (await validatePassword(requestPass, dbPass)) {
       return data;
-    } else {
-      logger.error(error);
-      return null;
     }
   } catch (error) {
     logger.error(error);
+    return null;
   }
 }
 

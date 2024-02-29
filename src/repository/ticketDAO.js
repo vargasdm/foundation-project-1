@@ -22,6 +22,7 @@ const userIndex = "user-index";
 
 const pendingIndex = "status-index";
 
+// getting tickets based on username partition key
 async function getTicketsByUser(paramUser) {
   const command = new QueryCommand({
     TableName,
@@ -36,13 +37,13 @@ async function getTicketsByUser(paramUser) {
   });
   try {
     const data = await documentClient.send(command);
-    console.log(data);
     return data;
   } catch (error) {
     logger.error(error);
   }
 }
 
+// getting tickets based on pending status GSI
 async function getTicketsByPending(status) {
   const command = new QueryCommand({
     TableName,
@@ -57,13 +58,13 @@ async function getTicketsByPending(status) {
   });
   try {
     const data = await documentClient.send(command);
-    console.log(data);
     return data;
   } catch (error) {
     logger.error(error);
   }
 }
 
+// create ticket item
 async function createTicket(ticket) {
   const command = new PutCommand({
     TableName,
@@ -71,13 +72,13 @@ async function createTicket(ticket) {
   });
   try {
     const data = await documentClient.send(command);
-    console.log(data);
     return data;
   } catch (error) {
     logger.error(error);
   }
 }
 
+// updating ticket item status
 async function updateTicket(status, queryId) {
   if (status === "Approve") {
     const command = new UpdateCommand({
@@ -91,12 +92,11 @@ async function updateTicket(status, queryId) {
 
     try {
       const data = await documentClient.send(command);
-      console.log(data);
       return data;
     } catch (error) {
       logger.error(error);
     }
-  } else if (status === "Denied") {
+  } else if (status === "Deny") {
     const command = new UpdateCommand({
       TableName,
       Key: { ticket_id: queryId },
