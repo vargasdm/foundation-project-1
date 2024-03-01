@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Reimbursement Ticketing System is a web-based application designed to streamline the process of managing reimbursement requests within an organization. It provides a platform for employees to submit reimbursement requests and for managers to review, approve, or deny these requests.
+The Reimbursement Ticketing System is a backend application designed to streamline the process of managing reimbursement requests within an organization. It provides a platform for employees to submit reimbursement requests and for managers to review, approve, or deny these requests.
 
 ## Features
 
