@@ -37,7 +37,7 @@ router.post("/create", authenticateToken, async (req, res) => {
     res.status(400).json({
       message:
         "A ticket could not be created, make sure all fields are filled and try again",
-      receivedData: data.Items[0],
+
     });
   }
 });
